@@ -119,6 +119,7 @@ void sign() {
     waitpad(J_B);
 
     NR52_REG = 0x80;
+    NR50_REG = 0x77;
 
     fadeout();
     SHOW_SPRITES;
@@ -236,6 +237,7 @@ UBYTE canplayermove(UINT8 newplayerx, UINT8 newplayery,
                     fadein();
 
                     NR52_REG = 0x80;
+                    NR50_REG = 0x77;
 
                     gbt_play(main_Data, 2, 2);
                     gbt_loop(1);
@@ -245,6 +247,7 @@ UBYTE canplayermove(UINT8 newplayerx, UINT8 newplayery,
                     SHOW_SPRITES;
 
                     NR52_REG = 0x80;
+                    NR50_REG = 0x77;
 
                     set_bkg_data(0, 97, cave_data);
                     set_bkg_tiles(0, 0, 20, 18, cave_map);
@@ -269,6 +272,7 @@ UBYTE canplayermove(UINT8 newplayerx, UINT8 newplayery,
             waitpad(J_B);
 
             NR52_REG = 0x80;
+            NR50_REG = 0x77;
 
             DISPLAY_OFF;
             SHOW_SPRITES;
@@ -863,6 +867,7 @@ void pause() {
     SHOW_SPRITES;
 
     NR52_REG = 0x80;
+    NR50_REG = 0x77;
 
     if (stage == 0) {
         set_bkg_data(0, 52, cave_data);
